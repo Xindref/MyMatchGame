@@ -1,0 +1,238 @@
+#game div {
+  border: 2px solid black;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  box-shadow: -6px 6px 1px rgb(0, 0, 0);
+  display: flex;
+  overflow: hidden;
+}
+
+#cardCount {
+  position: relative;
+  left: 310px;
+  top: 5px
+}
+
+#game {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 100px;
+  gap: 25px;
+}
+
+#newGameBtn {
+  position: fixed;
+  height: 60px;
+  width: 130px;
+  top: 5px;
+  right: 5px;
+  border-radius: 8px;
+  box-shadow: -2px 2px 4px rgb(21, 96, 131);
+  background-color: rgb(51, 187, 69);
+  color: rgb(29, 250, 250);
+  text-shadow: -2px 2px 3px rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+#scoreBoard {
+  position: fixed;
+  left: 8px;
+  top: 0px;
+  text-shadow: 1px 2px 1px black;
+  color: rgb(25, 255, 236);
+  font-size: 28px;
+}
+
+.topScoreHolder {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%);
+  text-shadow: 1px 2px 1px black;
+  color: rgb(255, 213, 25);
+  font-size: 30px;
+  z-index: 2;
+}
+
+#scoreBoard span {
+  color: rgb(0, 255, 0);
+  top: 0px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 75px;
+  color: rgb(0, 255, 149);
+  text-shadow: 4px 6px 3px rgb(20, 77, 182);
+  animation: rotation 1s infinite linear alternate;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(5deg);
+  }
+
+  to {
+    transform: rotate(-5deg);
+  }
+}
+
+html {
+  background: rgb(109, 187, 91);
+  background: linear-gradient(0deg, rgba(109, 187, 91, 1) 0%, rgba(97, 182, 151, 1) 50%, rgba(84, 176, 211, 1) 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#mainMenu {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  background-position: center;
+  background: rgb(109, 187, 91);
+  background: linear-gradient(0deg, rgba(109, 187, 91, 1) 0%, rgba(97, 182, 151, 1) 50%, rgba(84, 176, 211, 1) 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#mainMenu div {
+  position: relative;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#mainMenu div button {
+  position: relative;
+  height: 60px;
+  width: 200px;
+  font-size: 2rem;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 5px;
+  top: -20px;
+  box-shadow: 0px 3px 5px rgb(38, 121, 89);
+  background-color: rgb(38, 248, 196);
+}
+
+#mainMenu>div>input {
+  position: relative;
+  display: block;
+  height: 50px;
+  width: 200px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#mainMenu>div>label {
+  display: block;
+  text-align: center;
+  color: rgb(255, 217, 0);
+  text-shadow: -2px 2px 2px rgb(0, 0, 0);
+  top: 10px;
+  font-size: 22px;
+  left: 0px;
+}
+
+h2 {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  width: 70%;
+  font-size: 85px;
+  color: rgb(0, 255, 149);
+  text-shadow: 4px 6px 3px rgb(20, 77, 182);
+  animation: rotation 1s infinite linear alternate;
+}
+
+body>div:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#winScreenContainer {
+  position: fixed;
+  display: flex;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#winScreen {
+  position: absolute;
+  text-align: center;
+  width: 480px;
+  height: 350px;
+  background-color: rgba(22, 145, 202, 0.75);
+  border-radius: 60px;
+  box-shadow: 0px 4px 5px black;
+}
+
+#winScreen h3 {
+  position: relative;
+  top: -40px;
+  font-size: 80px;
+  color: red;
+  text-shadow: 3px 4px 2px black;
+  animation: winRotation .75s linear alternate;
+  rotate: -8deg;
+}
+
+@keyframes winRotation {
+  from {
+    transform: rotate(0deg);
+    font-size: 1px;
+    top: -400px;
+  }
+
+  to {
+    transform: rotate(720deg);
+  }
+}
+
+#winScreen label {
+  font-size: 3rem;
+  color: rgb(0, 255, 0);
+  text-shadow: -2px 2px 2px rgb(0, 0, 0);
+  position: inherit;
+  display: block;
+  left: 140px;
+  top: 150px;
+  rotate: -4deg;
+  animation: grow-shrink .5s alternate infinite;
+}
+
+@keyframes grow-shrink {
+  from {
+    scale: 1.1;
+  }
+
+  to {
+    scale: 1.3;
+  }
+}
+
+#playAgain,
+#goToMain {
+  position: relative;
+  font-size: 1.5rem;
+  top: -40px;
+  margin: 20px;
+  height: 80px;
+  width: 160px;
+  border-radius: 10px;
+}

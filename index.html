@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Memory Game!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div>
+    <label class="topScoreHolder" for="highScore">Top Score: <span class="topScore">0</span></label>
+  </div>
+  <div id="mainMenu">
+    <div>
+      <h2>Memory Game!</h2>
+      <button id="mainMenuNewGame" type="submit">New Game</button>
+      <label class="matchCount" for="cardCount">Match Count: 12</label>
+      <input type="range" id="cardCount" min="6" max="30" step="2" value="12">
+    </div>
+  </div>
+  <div id="winScreenContainer">
+    <div id="winScreen" hidden="true">
+      <h3>You Win!</h3>
+      <label for="score">Score: <span class="score">0</span></label>
+      <button id="playAgain">Play Again</button>
+      <button id="goToMain">Main Menu</button>
+    </div>
+  </div>
+  <h1>Memory Game!</h1>
+  <label id="scoreBoard" for="score">Score: <span class="score">0</span></label>
+  <input type="button" id="newGameBtn" value=" New Game">
+  <div id="game">
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
